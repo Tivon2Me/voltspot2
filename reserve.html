@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VoltSpot - Reserve a Charging Bay</title>
+</head>
+<body>
+
+    <header>
+        <h1>VoltSpot EV Charging</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="stations.html">Station Locations</a></li>
+                <li><a href="reserve.html"><strong>Book a Charger</strong></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <hr>
+
+    <main>
+        <section>
+            <h2>Reserve a Charging Slot</h2>
+            <p>Fill in the form below to lock in your charging bay ahead of arrival.</p>
+
+            <!-- Reservation Form with >4 distinct input types -->
+            <form action="#" method="post">
+                
+                <fieldset>
+                    <legend><strong>1. Driver Details</strong></legend>
+                    
+                    <!-- Input Type 1: Text -->
+                    <label for="fullname">Full Name:</label><br>
+                    <input type="text" id="fullname" name="fullname" placeholder="e.g. Alex Morgan" required><br><br>
+
+                    <!-- Input Type 2: Email -->
+                    <label for="email">Email Address:</label><br>
+                    <input type="email" id="email" name="email" placeholder="alex@example.com" required><br><br>
+
+                    <!-- Input Type 3: Tel -->
+                    <label for="phone">Phone Number:</label><br>
+                    <input type="tel" id="phone" name="phone" placeholder="+1234567890" required><br>
+                </fieldset>
+
+                <br>
+
+                <fieldset>
+                    <legend><strong>2. Charging Session Details</strong></legend>
+
+                    <label for="location">Select Station Location:</label><br>
+                    <select id="location" name="location" required>
+                        <option value="">-- Choose a Hub --</option>
+                        <option value="downtown">Downtown Central Hub</option>
+                        <option value="westside">Westside Mall Plaza</option>
+                        <option value="highway">Highway Gateway Station</option>
+                    </select><br><br>
+
+                    <!-- Input Type 4: Date -->
+                    <label for="date">Reservation Date:</label><br>
+                    <input type="date" id="date" name="date" required><br><br>
+
+                    <!-- Input Type 5: Time -->
+                    <label for="time">Arrival Time:</label><br>
+                    <input type="time" id="time" name="time" required><br><br>
+
+                    <!-- Input Type 6: Radio -->
+                    <p>Select Charger Level:</p>
+                    <input type="radio" id="level2" name="charger_type" value="level2" checked>
+                    <label for="level2">Level 2 AC (7–22 kW)</label><br>
+                    
+                    <input type="radio" id="dc_fast" name="charger_type" value="dc_fast">
+                    <label for="dc_fast">DC Fast Charger (50–150 kW)</label><br>
+                    
+                    <input type="radio" id="ultra_fast" name="charger_type" value="ultra_fast">
+                    <label for="ultra_fast">Ultra-Fast DC (250–350 kW)</label><br><br>
+
+                    <!-- Input Type 7: Number -->
+                    <label for="duration">Target Battery Charge Level (%):</label><br>
+                    <input type="number" id="duration" name="target_charge" min="20" max="100" value="80"><br>
+                </fieldset>
+
+                <br>
+
+                <fieldset>
+                    <legend><strong>3. Additional Preferences</strong></legend>
+
+                    <!-- Input Type 8: Checkbox -->
+                    <input type="checkbox" id="notify" name="notify" value="yes" checked>
+                    <label for="notify">Send SMS notification when bay is ready</label><br>
+
+                    <input type="checkbox" id="lounge" name="lounge_access" value="yes">
+                    <label for="lounge">Request VIP Lounge Access keycode</label><br><br>
+
+                    <label for="notes">Special Requests or Vehicle Model:</label><br>
+                    <textarea id="notes" name="notes" rows="4" cols="40" placeholder="e.g. Driving a Nissan Leaf (CHAdeMO connector needed)"></textarea>
+                </fieldset>
+
+                <br>
+
+                <!-- Input Type 9 & 10: Submit & Reset Buttons -->
+                <input type="submit" value="Confirm Reservation">
+                <input type="reset" value="Clear Form">
+
+            </form>
+        </section>
+    </main>
+
+    <hr>
+
+    <footer>
+        <p>&copy; 2026 VoltSpot Network. All rights reserved.</p>
+        <p><a href="index.html">Return to Home</a></p>
+    </footer>
+
+</body>
+</html>
